@@ -17,7 +17,7 @@ export default new Router({
     },
     {
       path: "/scene",
-      name: "room",
+      name: "scene",
       component: () => import("./views/2-Scene.vue")
     },
     {

@@ -19,7 +19,7 @@
     <v-list-item>
       <v-icon>mdi-send</v-icon>
 
-      <v-list-item-subtitle>23 km/h</v-list-item-subtitle>
+      <v-list-item-subtitle>29 km/h</v-list-item-subtitle>
     </v-list-item>
 
     <v-list-item>
@@ -33,9 +33,7 @@
       <v-list-item v-for="item in forecast" :key="item.day">
         <v-list-item-title>{{ item.day }}</v-list-item-title>
 
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
+        <v-icon>{{ item.icon }}</v-icon>
 
         <v-list-item-subtitle class="text-right">{{ item.temp }}</v-list-item-subtitle>
       </v-list-item>

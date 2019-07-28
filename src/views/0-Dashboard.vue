@@ -14,37 +14,21 @@
       <StatsCard name="卧室" icon="mdi-blur" color="teal" value="598" unit="ug/m³" badge="true"></StatsCard>
       <StatsCard name="卧室" icon="mdi-periodic-table-co2" color="pink" value="590" unit="ppm"></StatsCard>
     </v-layout>
-    <v-layout>
+    <v-layout wrap>
       <v-flex shrink>
-        <v-card width="280">
-          <v-toolbar color="primary" dense dark>
-            <v-icon>mdi-hotel</v-icon>
-            <v-toolbar-title class="ml-5">主卧室</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn small rounded color="white" depressed class="primary--text">16</v-btn>
-            <!-- <h3 class="font-weight-light">7</h3> -->
-          </v-toolbar>
-          <v-list avatar two-line>
-            <v-list-item-group color="primary">
-              <NormalLight></NormalLight>
-              <v-divider></v-divider>
-              <Curtain></Curtain>
-              <v-divider></v-divider>
-              <DimLight></DimLight>
-              <v-divider></v-divider>
-              <NormalLight></NormalLight>
-              <v-divider></v-divider>
-              <NormalLight></NormalLight>
-              <v-divider></v-divider>
-              <DimLight></DimLight>
-              <v-divider></v-divider>
-              <NormalLight></NormalLight>
-            </v-list-item-group>
-          </v-list>
-        </v-card>
+        <RoomCard></RoomCard>
       </v-flex>
       <v-flex shrink>
-        <WeatherCard></WeatherCard>
+        <RoomCard></RoomCard>
+      </v-flex>
+      <v-flex shrink>
+        <RoomCard></RoomCard>
+      </v-flex>
+      <v-flex shrink>
+        <RoomCard></RoomCard>
+      </v-flex>
+      <v-flex shrink>
+        <RoomCard></RoomCard>
       </v-flex>
     </v-layout>
   </v-container>
@@ -52,17 +36,12 @@
 
 <script>
 import StatsCard from "@/components/cards/StatsCard";
-import NormalLight from "@/components/listitem/NormalLight";
-import DimLight from "@/components/listitem/DimLight";
-import Curtain from "@/components/listitem/Curtain";
-import WeatherCard from "@/components/cards/WeatherCard";
+import RoomCard from "@/components/cards/RoomCard";
+
 export default {
   components: {
     StatsCard,
-    NormalLight,
-    DimLight,
-    Curtain,
-    WeatherCard
+    RoomCard
   }
 };
 </script>
